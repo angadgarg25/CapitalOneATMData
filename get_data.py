@@ -2,6 +2,7 @@ import requests
 import json
 from geopy.geocoders import Nominatim
 from time import sleep
+from csv_loader import*
 
 apiKey = 'd5d5235772590ef035be0c3610f957a3'
 
