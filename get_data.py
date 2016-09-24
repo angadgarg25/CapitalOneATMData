@@ -1,10 +1,9 @@
 import requests
 import json
 
-customerId = 'your customerId here'
-apiKey = 'your apiKey here'
+apiKey = '9203847529304875'
 
-url = 'http://api.reimaginebanking.com/customers/{}/accounts?key={}'.format(customerId,apiKey)
+url = 'http://api.reimaginebanking.com/enterprise/merchants/accounts?key={}'.format(apiKey)
 payload = {
   "type": "Savings",
   "nickname": "test",
