@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCakf_mbF7bh1FFHV7Io_7V3Oz_mcsSeLI&libraries=visualization&callback=initMap"
+    async defer>   	
+</script>
+
+<style type="text/css">
+	html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    #map {
+        height: 100%;
+    }
+</style>
+
+<head>
+
+</head>
+
+
+<body>
+	<div id="map"></div>
+</body>
+
+
+<footer>
+	
+</footer>
+
+<script type="text/javascript">
+
+	var map, heatmap;
+
+	function initMap() {
+		map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 6,
+          center: {lat: 39.11208, lng: -77.14651},
+          mapTypeId: 'satellite'
+        });
+
+        heatmap = new google.maps.visualization.HeatmapLayer({
+          data: getPoints(),
+          map: map
+        });
+        heatmap.set('radius', heatmap.get('radius') ? null : 50);
+
+        var marker = new google.maps.Marker({position: {lat: 38.8981779, lng: -77.1211338},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8981779, lng: -77.1211338},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8960952, lng: -77.1333157},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8960952, lng: -77.1333157},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8960952, lng: -77.1333157},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.882163, lng: -77.1113105},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8788951, lng: -77.1102162},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8788951, lng: -77.1102162},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8788951, lng: -77.1102162},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.879446, lng: -77.109526},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.879446, lng: -77.109526},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8786679, lng: -77.10942059999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8689155, lng: -77.1506881},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8689155, lng: -77.1506881},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.896854, lng: -77.071978},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8947171, lng: -77.0702878},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8947171, lng: -77.0702878},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9500943, lng: -77.1192523},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9500943, lng: -77.1192523},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9392871, lng: -77.0871844},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9392871, lng: -77.0871844},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9392871, lng: -77.0871844},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9392871, lng: -77.0871844},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9392871, lng: -77.0871844},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9449596, lng: -77.0961428},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9449596, lng: -77.0961428},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.905297, lng: -77.0653548},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9102227, lng: -77.0646324},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9102227, lng: -77.0646324},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8923369, lng: -77.18639209999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8923369, lng: -77.18639209999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8977328, lng: -77.1878309},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.932887, lng: -77.17829449999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.932887, lng: -77.17829449999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.932887, lng: -77.17829449999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8605859, lng: -77.09358499999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8605859, lng: -77.09358499999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8605859, lng: -77.09358499999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.90372, lng: -77.0596966},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9590565, lng: -77.0848741},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9590565, lng: -77.0848741},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9380881, lng: -77.1823211},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9380881, lng: -77.1823211},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9380881, lng: -77.1823211},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8491288, lng: -77.1172646},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8491288, lng: -77.1172646},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8491288, lng: -77.1172646},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9070597, lng: -77.0507354},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9005805, lng: -77.04966999999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.96369560000001, lng: -77.1066261},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.96369560000001, lng: -77.1066261},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.93625110000001, lng: -77.0582046},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9643486, lng: -77.106949},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9024769, lng: -77.20388249999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9024769, lng: -77.20388249999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9590565, lng: -77.0848741},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.91374560000001, lng: -77.0457103},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.90017479999999, lng: -77.0459826},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.90017479999999, lng: -77.0459826},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9110364, lng: -77.0448991},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.96085850000001, lng: -77.0857097},map: map});
+		marker = new google.maps.Marker({position: {lat: 34.7162747, lng: -78.062917},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8708761, lng: -77.0558384},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9019865, lng: -77.0430097},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9053571, lng: -77.04193819999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9053571, lng: -77.04193819999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9053571, lng: -77.04193819999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9625208, lng: -77.0849195},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.901438, lng: -77.0419007},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8639404, lng: -77.0601179},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8639404, lng: -77.0601179},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8639404, lng: -77.0601179},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8614551, lng: -77.0587467},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8614551, lng: -77.0587467},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.902173, lng: -77.0399522},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.902173, lng: -77.0399522},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8630559, lng: -77.0601093},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.89952, lng: -77.040381},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.89952, lng: -77.040381},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9033865, lng: -77.04083159999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9029004, lng: -77.0390135},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9037384, lng: -77.03852479999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9037384, lng: -77.03852479999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8523336, lng: -77.04248179999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8523336, lng: -77.04248179999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8523336, lng: -77.04248179999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.902006, lng: -77.033287},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9663478, lng: -77.0767568},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9663478, lng: -77.0767568},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8615918, lng: -77.05074499999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9010349, lng: -77.0322568},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8596001, lng: -77.05180760000002},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8572168, lng: -77.05187459999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8949053, lng: -77.0302118},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8949053, lng: -77.0302118},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8949053, lng: -77.0302118},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8949053, lng: -77.0302118},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8974207, lng: -77.0296178},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8974207, lng: -77.0296178},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8974207, lng: -77.0296178},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9284645, lng: -77.0329064},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.897154, lng: -77.0282675},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.897154, lng: -77.0282675},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8936604, lng: -77.0279673},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8550463, lng: -77.0497192},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8550463, lng: -77.0497192},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8875558, lng: -77.0287341},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.849464, lng: -77.05329499999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9175184, lng: -77.2258877},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9175184, lng: -77.2258877},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.912025, lng: -76.99549979999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8298056, lng: -77.0920119},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8298056, lng: -77.0920119},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9808356, lng: -77.0935135},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9808356, lng: -77.0935135},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9808356, lng: -77.0935135},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8944693, lng: -77.0223723},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8944693, lng: -77.0223723},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8944693, lng: -77.0223723},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.89981590000001, lng: -77.0207781},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9205947, lng: -77.2273577},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8983998, lng: -77.0216171},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8983998, lng: -77.0216171},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8983998, lng: -77.0216171},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8983998, lng: -77.0216171},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8983998, lng: -77.0216171},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.92231049999999, lng: -77.2272485},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.984367, lng: -77.09512099999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9034306, lng: -77.0187698},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8920618, lng: -77.0208743},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.897842, lng: -77.01942},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9854212, lng: -77.093595},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9854212, lng: -77.093595},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.885987, lng: -77.02090199999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8969442, lng: -77.01759469999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8523336, lng: -77.04248179999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8523336, lng: -77.04248179999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8523336, lng: -77.04248179999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8523336, lng: -77.04248179999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8523336, lng: -77.04248179999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8523336, lng: -77.04248179999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8523336, lng: -77.04248179999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8523336, lng: -77.04248179999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8523336, lng: -77.04248179999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8523336, lng: -77.04248179999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8523336, lng: -77.04248179999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8365716, lng: -77.0504626},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9909768, lng: -77.0969313},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9909768, lng: -77.0969313},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9909768, lng: -77.0969313},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9007143, lng: -77.0115173},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.991694, lng: -77.1536083},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8975061, lng: -77.0059863},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8975061, lng: -77.0059863},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9271809, lng: -77.0146728},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8664503, lng: -77.2301317},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8664503, lng: -77.2301317},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8297662, lng: -77.1889159},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8297662, lng: -77.1889159},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8981873, lng: -77.0068546},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.88517179999999, lng: -77.0061551},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9943328, lng: -77.0763425},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8090259, lng: -77.14197949999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9957941, lng: -77.0759868},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8868701, lng: -77.0008256},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8770883, lng: -77.0040154},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8770883, lng: -77.0040154},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.884243, lng: -76.995835},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7797446, lng: -77.1847098},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7797446, lng: -77.1847098},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8835778, lng: -76.99524079999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8835778, lng: -76.99524079999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8061673, lng: -77.06150679999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.904818, lng: -77.26190199999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.904818, lng: -77.26190199999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.952534, lng: -76.999462},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.804034, lng: -77.064458},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.874981, lng: -77.264893},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9834649, lng: -77.0211983},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7946065, lng: -77.07440849999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8703504, lng: -77.2623614},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8703504, lng: -77.2623614},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9358531, lng: -76.9642504},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9358531, lng: -76.9642504},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9936282, lng: -77.0322949},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8740115, lng: -76.9724318},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9932522, lng: -77.0263252},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9932522, lng: -77.0263252},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9932522, lng: -77.0263252},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9932522, lng: -77.0263252},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0245951, lng: -77.1331784},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9971571, lng: -77.02986279999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9971571, lng: -77.02986279999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9971571, lng: -77.02986279999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8442577, lng: -77.2722943},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8442577, lng: -77.2722943},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0241378, lng: -77.1459998},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8041116, lng: -77.0411161},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0252174, lng: -77.12731459999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8000264, lng: -77.047769},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8000264, lng: -77.047769},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7840091, lng: -77.134322},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7840091, lng: -77.134322},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0317221, lng: -77.10287129999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0269899, lng: -77.14787419999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0269899, lng: -77.14787419999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0184222, lng: -77.20920389999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0184222, lng: -77.20920389999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0184222, lng: -77.20920389999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7818524, lng: -77.1859315},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7818524, lng: -77.1859315},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7818524, lng: -77.1859315},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.031229, lng: -77.07471699999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.031229, lng: -77.07471699999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.031229, lng: -77.07471699999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8585879, lng: -76.96759320000001},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8585879, lng: -76.96759320000001},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9996868, lng: -77.00186479999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9996868, lng: -77.00186479999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9884198, lng: -76.98858179999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9884198, lng: -76.98858179999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9884198, lng: -76.98858179999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.041066, lng: -77.1569827},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.041066, lng: -77.1569827},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8816527, lng: -77.3005261},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8816527, lng: -77.3005261},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7699643, lng: -77.0822216},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7699643, lng: -77.0822216},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7699643, lng: -77.0822216},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7663057, lng: -77.1684341},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0466173, lng: -77.1039959},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0466173, lng: -77.1039959},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9678572, lng: -76.9574736},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9678572, lng: -76.9574736},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9678572, lng: -76.9574736},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.048323, lng: -77.11770500000002},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.048323, lng: -77.11770500000002},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.048323, lng: -77.11770500000002},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0216274, lng: -77.014313},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0216274, lng: -77.014313},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0353262, lng: -77.0519966},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0399013, lng: -77.05095759999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0399013, lng: -77.05095759999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0399013, lng: -77.05095759999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.965015, lng: -76.950817},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.965015, lng: -76.950817},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.965015, lng: -76.950817},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.965015, lng: -76.950817},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7848765, lng: -77.01619459999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8041663, lng: -76.9830446},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8041663, lng: -76.9830446},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.05565290000001, lng: -77.1181744},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.05565290000001, lng: -77.1181744},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.05565290000001, lng: -77.1181744},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7790146, lng: -77.2364017},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7790146, lng: -77.2364017},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.856599, lng: -77.31286},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.856599, lng: -77.31286},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0411056, lng: -77.03144879999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0411056, lng: -77.03144879999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0617521, lng: -77.1247908},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0617521, lng: -77.1247908},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0617521, lng: -77.1247908},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0572185, lng: -77.08511179999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0572185, lng: -77.08511179999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0572185, lng: -77.08511179999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8402846, lng: -76.9424773},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8402846, lng: -76.9424773},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8402846, lng: -76.9424773},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9972567, lng: -77.287893},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9972567, lng: -77.287893},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.062068, lng: -77.1125374},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8450533, lng: -76.930605},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0213979, lng: -76.97688450000001},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0213979, lng: -76.97688450000001},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9869183, lng: -76.9425543},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0590308, lng: -77.0489393},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0590308, lng: -77.0489393},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0590308, lng: -77.0489393},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9854457, lng: -76.9370297},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9854457, lng: -76.9370297},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9854457, lng: -76.9370297},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9854457, lng: -76.9370297},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9854457, lng: -76.9370297},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9854457, lng: -76.9370297},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9854457, lng: -76.9370297},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9395921, lng: -76.9083224},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9395921, lng: -76.9083224},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9395921, lng: -76.9083224},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9395921, lng: -76.9083224},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0420539, lng: -76.9914264},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0420539, lng: -76.9914264},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7788988, lng: -77.27404349999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8875289, lng: -76.8997794},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0787953, lng: -77.079345},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0787953, lng: -77.079345},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0787953, lng: -77.079345},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7393933, lng: -77.2116939},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7393933, lng: -77.2116939},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.083784, lng: -77.14817099999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0808583, lng: -77.1856214},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8623883, lng: -77.3592103},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0883223, lng: -77.1502326},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0883223, lng: -77.1502326},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0883223, lng: -77.1502326},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8529185, lng: -76.8968},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8529185, lng: -76.8968},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8529185, lng: -76.8968},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.826975, lng: -76.9115549},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8582893, lng: -77.3544726},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.960734, lng: -77.3554856},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.960734, lng: -77.3554856},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9585119, lng: -77.35863119999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0951431, lng: -77.1125617},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0951431, lng: -77.1125617},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9995236, lng: -76.9099301},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9995236, lng: -76.9099301},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9511062, lng: -76.8859349},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9511062, lng: -76.8859349},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0973684, lng: -77.15773519999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9977692, lng: -76.9087504},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9977692, lng: -76.9087504},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9977692, lng: -76.9087504},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.07319930000001, lng: -77.0025975},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.07319930000001, lng: -77.0025975},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.07319930000001, lng: -77.0025975},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8722118, lng: -77.3730126},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8722118, lng: -77.3730126},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0905382, lng: -77.04678520000002},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0905382, lng: -77.04678520000002},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0576262, lng: -76.9670436},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0576262, lng: -76.9670436},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0576262, lng: -76.9670436},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0926471, lng: -77.202846},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0926471, lng: -77.202846},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0059641, lng: -76.9064495},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0976479, lng: -77.1935101},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0976479, lng: -77.1935101},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0976479, lng: -77.1935101},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1036913, lng: -77.0757311},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1036913, lng: -77.0757311},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.946827, lng: -76.87048},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.952001, lng: -76.8665177},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7255719, lng: -76.9917377},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7255719, lng: -76.9917377},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7255719, lng: -76.9917377},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.106665, lng: -77.199958},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.031856, lng: -76.912493},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.031856, lng: -76.912493},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.031856, lng: -76.912493},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1138753, lng: -77.17137369999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1138753, lng: -77.17137369999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.99350039999999, lng: -76.8780764},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.99350039999999, lng: -76.8780764},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1171725, lng: -77.1647867},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9491429, lng: -77.3945092},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9491429, lng: -77.3945092},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9013378, lng: -76.84773369999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9024998, lng: -76.84694549999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7140667, lng: -77.26236519999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7140667, lng: -77.26236519999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9072869, lng: -77.4083935},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9072869, lng: -77.4083935},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0334919, lng: -77.4052123},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0334919, lng: -77.4052123},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.900421, lng: -76.84240799999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.96223519999999, lng: -77.3988895},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.96223519999999, lng: -77.3988895},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.96223519999999, lng: -77.3988895},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1143906, lng: -77.2159336},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1143906, lng: -77.2159336},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1179301, lng: -77.2002122},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9023282, lng: -76.83723619999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9023282, lng: -76.83723619999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9023282, lng: -76.83723619999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9023282, lng: -76.83723619999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9023282, lng: -76.83723619999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1300315, lng: -77.1680586},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1300315, lng: -77.1680586},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7511838, lng: -76.8797199},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7511838, lng: -76.8797199},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.123809, lng: -77.2382506},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.123809, lng: -77.2382506},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.123809, lng: -77.2382506},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.123809, lng: -77.2382506},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.118362, lng: -77.25308299999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.118362, lng: -77.25308299999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.118362, lng: -77.25308299999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8938701, lng: -77.4317798},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8938701, lng: -77.4317798},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8938701, lng: -77.4317798},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.955353, lng: -76.822688},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.955353, lng: -76.822688},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.955353, lng: -76.822688},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0252633, lng: -77.40228479999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0252633, lng: -77.40228479999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8357817, lng: -77.43151},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8357817, lng: -77.43151},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.8357817, lng: -77.43151},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0352526, lng: -77.3974851},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0352526, lng: -77.3974851},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0352526, lng: -77.3974851},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1501836, lng: -77.0664773},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1501836, lng: -77.0664773},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9848323, lng: -77.42985809999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1428654, lng: -77.2177942},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1428654, lng: -77.2177942},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1428654, lng: -77.2177942},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9912191, lng: -77.42985809999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1516869, lng: -77.06269329999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1516869, lng: -77.06269329999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1516869, lng: -77.06269329999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9525892, lng: -77.4480674},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1518425, lng: -77.2106982},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1518425, lng: -77.2106982},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1518425, lng: -77.2106982},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.11131779999999, lng: -76.9337911},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.11131779999999, lng: -76.9337911},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.11131779999999, lng: -76.9337911},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1537073, lng: -77.2116597},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9592863, lng: -77.4484418},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9592863, lng: -77.4484418},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9592863, lng: -77.4484418},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9592863, lng: -77.4484418},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9592863, lng: -77.4484418},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9592863, lng: -77.4484418},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9592863, lng: -77.4484418},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9592863, lng: -77.4484418},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9592863, lng: -77.4484418},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9592863, lng: -77.4484418},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.854388, lng: -77.45059789999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.854388, lng: -77.45059789999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.95817359999999, lng: -77.4474395},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.024146, lng: -77.42435329999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.024146, lng: -77.42435329999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0318656, lng: -77.4234606},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0318656, lng: -77.4234606},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0318656, lng: -77.4234606},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0318656, lng: -77.4234606},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0318656, lng: -77.4234606},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0778305, lng: -76.8694496},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0778305, lng: -76.8694496},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0778305, lng: -76.8694496},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0077102, lng: -77.4376746},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0077102, lng: -77.4376746},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0077102, lng: -77.4376746},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1475345, lng: -77.27475760000002},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1475345, lng: -77.27475760000002},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.170525, lng: -77.207241},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.170525, lng: -77.207241},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.170525, lng: -77.207241},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1598496, lng: -77.2792611},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1598496, lng: -77.2792611},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.67350589999999, lng: -77.3344445},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.67350589999999, lng: -77.3344445},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9145961, lng: -77.48786199999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9145961, lng: -77.48786199999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9145961, lng: -77.48786199999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0951371, lng: -76.8538429},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0951371, lng: -76.8538429},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0951371, lng: -76.8538429},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1858304, lng: -77.1890355},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1858304, lng: -77.1890355},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1858304, lng: -77.1890355},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.6788052, lng: -77.3638861},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.6788052, lng: -77.3638861},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1863063, lng: -77.24657619999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1803311, lng: -77.26800659999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1803311, lng: -77.26800659999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1803311, lng: -77.26800659999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7492746, lng: -77.4498947},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7492746, lng: -77.4498947},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0228517, lng: -77.4811038},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0228517, lng: -77.4811038},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0431277, lng: -77.4737347},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0431277, lng: -77.4737347},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0431277, lng: -77.4737347},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.6293941, lng: -77.2888725},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.6468711, lng: -77.33334599999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.6468711, lng: -77.33334599999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.20431689999999, lng: -77.24533149999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.20431689999999, lng: -77.24533149999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.20431689999999, lng: -77.24533149999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9801487, lng: -76.7324934},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9801487, lng: -76.7324934},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0978281, lng: -76.80815799999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0978281, lng: -76.80815799999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0978281, lng: -76.80815799999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9374507, lng: -76.7186345},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9374507, lng: -76.7186345},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9374507, lng: -76.7186345},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0250957, lng: -77.508186},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0250957, lng: -77.508186},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.6283485, lng: -76.91544999999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.6283485, lng: -76.91544999999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.6283485, lng: -76.91544999999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7792751, lng: -77.5103178},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7792751, lng: -77.5103178},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9849085, lng: -77.53509500000001},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9849085, lng: -77.53509500000001},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0797106, lng: -77.4932936},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0797106, lng: -77.4932936},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0797106, lng: -77.4932936},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.2104587, lng: -76.9380482},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.2104587, lng: -76.9380482},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.2104587, lng: -76.9380482},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.5960272, lng: -77.33379029999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.5960272, lng: -77.33379029999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1764975, lng: -76.8454275},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1764975, lng: -76.8454275},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1764975, lng: -76.8454275},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.6130818, lng: -77.3735276},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.6130818, lng: -77.3735276},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.173487, lng: -76.80141499999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0985339, lng: -77.5284008},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0985339, lng: -77.5284008},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0985339, lng: -77.5284008},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0368696, lng: -76.67929459999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.0368696, lng: -76.67929459999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1958701, lng: -76.81743089999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1958701, lng: -76.81743089999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1958701, lng: -76.81743089999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.5436566, lng: -76.9842596},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.5436566, lng: -76.9842596},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.18686599999999, lng: -76.795525},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.18686599999999, lng: -76.795525},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.18686599999999, lng: -76.795525},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.750011, lng: -77.5728759},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.750011, lng: -77.5728759},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.2847255, lng: -77.2093297},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.2847255, lng: -77.2093297},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.2847255, lng: -77.2093297},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7970196, lng: -77.6055921},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7970196, lng: -77.6055921},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7970196, lng: -77.6055921},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1101336, lng: -77.5554549},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1101336, lng: -77.5554549},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1101336, lng: -77.5554549},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1520865, lng: -76.7435682},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.24224359999999, lng: -76.8410894},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.24224359999999, lng: -76.8410894},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.725262, lng: -76.6582547},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.725262, lng: -76.6582547},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1528704, lng: -76.7210978},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1528704, lng: -76.7210978},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1528704, lng: -76.7210978},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.2111345, lng: -76.77809040000001},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.2111345, lng: -76.77809040000001},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.934975, lng: -76.56784499999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.934975, lng: -76.56784499999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.2767764, lng: -76.8302289},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.2767764, lng: -76.8302289},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7833112, lng: -77.6649726},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7833112, lng: -77.6649726},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1507177, lng: -76.6530125},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1507177, lng: -76.6530125},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1507177, lng: -76.6530125},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1879268, lng: -76.6908006},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.3283672, lng: -77.3523152},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.3283672, lng: -77.3523152},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9736144, lng: -76.5430071},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9756401, lng: -76.5451751},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.3640536, lng: -77.1612463},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.3640536, lng: -77.1612463},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9894637, lng: -76.54557179999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9894637, lng: -76.54557179999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9894637, lng: -76.54557179999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9894637, lng: -76.54557179999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.98320229999999, lng: -76.53863059999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.98320229999999, lng: -76.53863059999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.98320229999999, lng: -76.53863059999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1381741, lng: -76.60040409999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1381741, lng: -76.60040409999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9688398, lng: -76.5199344},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9688398, lng: -76.5199344},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.080289, lng: -76.549261},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.080289, lng: -76.549261},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.4685384, lng: -77.4098561},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.4685384, lng: -77.4098561},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1359434, lng: -77.6983838},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.1359434, lng: -77.6983838},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.3801138, lng: -77.4232348},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.3801138, lng: -77.4232348},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.3825995, lng: -77.40572089999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.3825995, lng: -77.40572089999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.2842683, lng: -76.63750809999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.2842683, lng: -76.63750809999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.3955162, lng: -77.4129605},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.3955162, lng: -77.4129605},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.3955162, lng: -77.4129605},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7276336, lng: -77.7938736},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7276336, lng: -77.7938736},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.318954, lng: -76.6548485},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.2895119, lng: -76.6125252},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.29127039999999, lng: -76.6143369},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.3565224, lng: -76.7029996},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.3565224, lng: -76.7029996},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.3073578, lng: -76.6156621},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.417858, lng: -77.445082},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.417858, lng: -77.445082},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.417858, lng: -77.445082},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.4317766, lng: -77.4179362},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.4317766, lng: -77.4179362},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.4490663, lng: -77.38318389999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.4490663, lng: -77.38318389999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.2794111, lng: -76.5043889},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.2794111, lng: -76.5043889},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9738576, lng: -76.2704801},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.9738576, lng: -76.2704801},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.307875, lng: -77.512051},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.307875, lng: -77.512051},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.5845506, lng: -76.9881046},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.5845506, lng: -76.9881046},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.29193190000001, lng: -77.5673458},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.29193190000001, lng: -77.5673458},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.2211308, lng: -77.5046085},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.2211308, lng: -77.5046085},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.2985423, lng: -76.5106685},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.2985423, lng: -76.5106685},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.48377310000001, lng: -77.969124},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.48377310000001, lng: -77.969124},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7825011, lng: -76.084896},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7825011, lng: -76.084896},map: map});
+		marker = new google.maps.Marker({position: {lat: 38.7825011, lng: -76.084896},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.6069966, lng: -77.7343722},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.6332388, lng: -77.7019183},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.6332388, lng: -77.7019183},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.6332388, lng: -77.7019183},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.6246921, lng: -77.77081249999999},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.66396599999999, lng: -77.700267},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.66396599999999, lng: -77.700267},map: map});
+		marker = new google.maps.Marker({position: {lat: 39.66396599999999, lng: -77.700267},map: map});
+    }
+
+	text = FileHelper.readStringFromFileAtPath ( "https://github.com/angadgarg25/CapitalOneATMData/blob/master/purchase_data.csv" );
+	console.log(text);
+
+    function getPoints() {
+
+        return [
+		    {location: new google.maps.LatLng(42.2793986,-83.7376794), weight: 1000},
+			{location: new google.maps.LatLng(40.843004,-81.0869819), weight: 100},
+			{location: new google.maps.LatLng(11,42.2793986,-83.7376794), weight: 1100},
+			{location: new google.maps.LatLng(42.2793986,-83.7376794), weight: 2500},
+			{location: new google.maps.LatLng(41.141346,-78.3749979), weight: 1602},
+			{location: new google.maps.LatLng(41.141346,-78.3749979), weight: 1174},
+			{location: new google.maps.LatLng(41.141346,-78.374997), weight: 232},
+			{location: new google.maps.LatLng(41.141346,-78.3749979), weight: 1688},
+			{location: new google.maps.LatLng(41.141346,-78.3749979), weight: 1318},
+			{location: new google.maps.LatLng(41.141346,-78.3749979), weight: 1954},
+			{location: new google.maps.LatLng(41.141346,-78.3749979), weight: 1166},
+			{location: new google.maps.LatLng(42.2793986,-83.7376794), weight: 8000},
+			{location: new google.maps.LatLng(42.2793986,-83.7376794), weight: 1000},
+			{location: new google.maps.LatLng(42.2793986,-83.7376794), weight: 2000},
+			{location: new google.maps.LatLng(42.2793986,-83.7376794), weight: 2000},
+			{location: new google.maps.LatLng(42.2793986,-83.7376794), weight: 2000},
+			{location: new google.maps.LatLng(42.2793986,-83.7376794), weight: 2000},
+			{location: new google.maps.LatLng(42.2793986,-83.7376794), weight: 2000},
+			{location: new google.maps.LatLng(42.2793986,-83.7376794), weight: 2000},
+			{location: new google.maps.LatLng(42.2793986,-83.7376794), weight: 1000},
+			{location: new google.maps.LatLng(42.2793986,-83.7376794), weight: 1000},
+			{location: new google.maps.LatLng(38.6074844741857,-77.8996405978821), weight: 5000},
+			{location: new google.maps.LatLng(38.6074844741857,-77.8996405978821), weight: 5000},
+			{location: new google.maps.LatLng(38.6074844741857,-77.8996405978821), weight: 5000},
+			{location: new google.maps.LatLng(38.6074844741857,-77.8996405978821), weight: 5000},
+			{location: new google.maps.LatLng(38.6074844741857,-77.8996405978821), weight: 5000},
+			{location: new google.maps.LatLng(38.6074844741857,-77.8996405978821), weight: 5000},
+			{location: new google.maps.LatLng(38.6074844741857,-77.8996405978821), weight: 5000},
+			{location: new google.maps.LatLng(38.6074844741857,-77.8996405978821), weight: 5000},
+			{location: new google.maps.LatLng(38.6074844741857,-77.8996405978821), weight: 5000},
+			{location: new google.maps.LatLng(38.6074844741857,-77.8996405978821), weight: 5000},
+			{location: new google.maps.LatLng(38.6074844741857,-77.8996405978821), weight: 5000},
+			{location: new google.maps.LatLng(38.6074844741857,-77.8996405978821), weight: 5000},
+			{location: new google.maps.LatLng(38.6074844741857,-77.8996405978821), weight: 5000},
+			{location: new google.maps.LatLng(38.6074844741857,-77.8996405978821), weight: 5000},
+			{location: new google.maps.LatLng(38.6074844741857,-77.8996405978821), weight: 5000},
+			{location: new google.maps.LatLng(38.6074844741857,-77.8996405978821), weight: 5000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(37.7912226,-122.3941651), weight: 5000},
+			{location: new google.maps.LatLng(37.7912226,-122.3941651), weight: 5000},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(38.8043680816327,-77.0528568367347), weight: 1},
+			{location: new google.maps.LatLng(40.271496,-74.782821), weight: 200},
+			{location: new google.maps.LatLng(40.5020994,-74.4535448), weight: 1000},
+			{location: new google.maps.LatLng(40.5020994,-74.4535448), weight: 1000},
+			{location: new google.maps.LatLng(40.271496,-74.782821), weight: 2000},
+			{location: new google.maps.LatLng(40.271496,-74.782821), weight: 2000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(39.1120812897905,-77.1456114865124), weight: 10000},
+			{location: new google.maps.LatLng(37.5898212077705,-76.9734598794959), weight: 9000},
+			{location: new google.maps.LatLng(38.915177,-77.4031289), weight: 9000},
+			{location: new google.maps.LatLng(38.915177,-77.4031289), weight: 2000},
+			{location: new google.maps.LatLng(38.8474737,-77.3106861), weight: 10000},
+			{location: new google.maps.LatLng(38.8474737,-77.3106861), weight: 5000},
+			{location: new google.maps.LatLng(38.8474737,-77.3106861), weight: 5000},
+			{location: new google.maps.LatLng(38.8474737,-77.3106861), weight: 50},
+			{location: new google.maps.LatLng(38.8474737,-77.3106861), weight: 50}
+		];
+      }
+</script>
+
